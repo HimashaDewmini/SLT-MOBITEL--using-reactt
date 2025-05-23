@@ -1,27 +1,28 @@
-import React from 'react'
+import React from 'react';
 import './vacancies.css';
-import Navbar from '../../components/Navbar/navbar';
+import VacancyNavbar from '../../components/VacancyNavbar/VacancyNavbar.jsx';
 import Card from '../../components/Card/card';
 
-const vacancies = () => {
+const Vacancies = () => {
   return (
     <div className="vacancies-page">
-      
-       <div class="paragraph">
+      <VacancyNavbar />
+
+      <div className="paragraph">
         <p>Find your job that is prefer for you</p>
-        
       </div>
+
       <div className="vacancy-card-wrapper">
         <Card />
       </div>
-    <div class="card-footer">
-     <a href="appliedJob.html">
-     <button class="apply-btn2">Checked the applied job status</button>
-    </a>
-    </div>
-      
-    </div>
-  )
-}
 
-export default vacancies
+      <div className="card-footer">
+        <a href="/applied-job">
+          <button className="apply-btn2">Check the applied job status</button>
+        </a>
+      </div>
+    </div>
+  );
+};
+
+export default Vacancies;
