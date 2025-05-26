@@ -4,11 +4,15 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import Home from './pages/Home/home.jsx';
 import About from './pages/About/about.jsx';
-import Vacancies from './pages/Vacancy/vacancies.jsx';
+import Vacancy from './pages/Vacancy/vacancies.jsx';
 import Navbar from './components/Navbar/navbar.jsx';
 import VacancyNavbar from './components/VacancyNavbar/VacancyNavbar.jsx';
 import LoginModal from './components/Login/LoginModal.jsx';
 import SignupModal from './components/Signup/SignupModal.jsx';
+import JobStatus from './pages/JobStatus/JobStatus.jsx';  
+import ApplyJob from './pages/ApplyJob/ApplyJob.jsx'; 
+import JobCreation from './pages/JobsForYou/JobCreation/JobCreation.jsx';
+import JobModification from './pages/JobsForYou/JobModification/JobModification.jsx';
 
 function App() {
   const [isLoginOpen, setIsLoginOpen] = useState(false);
@@ -74,10 +78,57 @@ function App() {
           element={
             <>
               <VacancyNavbar />
-              <Vacancies />
+              <Vacancy />
             </>
           }
         />
+        <Route
+          path="/applied-job"
+          element={
+            <>
+              <VacancyNavbar />
+              <JobStatus />
+            </>
+          }
+        />
+
+        <Route
+            path="/apply"
+            element={
+              <>
+                <VacancyNavbar />
+                <ApplyJob />
+              </>
+            }
+          />
+          <Route
+                path="/vacancy-creation"
+                element={
+                  <>
+                    <VacancyNavbar />
+                    <JobCreation />
+                </>
+              }
+           />
+           <Route path="/job-creation" element={
+            <>
+            <VacancyNavbar/>
+            <JobCreation />
+            </>
+            } 
+            />
+        <Route path="/job-modification" element={
+          <>
+          <JobModification />
+          <VacancyNavbar />
+
+          </>
+          } 
+          />
+        {/* // <Route path="/received-cvs" element={<ReceivedCVs />} />
+        // <Route path="/accepted-cvs" element={<AcceptedCVs />} /> */}
+
+          
       </Routes>
     </Router>
   );

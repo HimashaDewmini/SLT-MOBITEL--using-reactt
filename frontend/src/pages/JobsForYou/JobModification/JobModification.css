@@ -1,0 +1,150 @@
+
+.sidebar {
+  width: 320px;
+  background-color: #0052a0; 
+  padding: 30px 10px; 
+  min-height: calc(100vh - 100px);
+}
+
+.sidebar ul {
+  list-style-type: none;
+}
+
+.sidebar li {
+  margin: 25px 0;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding-left: 20px;
+  position: relative;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+.sidebar li.active a::before,
+.sidebar li a:hover::before {
+  content: "▶";
+  position: absolute;
+  left: 0;
+  color: white;
+}
+
+.sidebar a:hover {
+  color: #ffd700;
+}
+
+
+
+
+.content {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.search-box {
+  position: absolute;
+  top: 30px;
+  right: 40px; 
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  padding: 4px 10px;
+  box-shadow: inset 0 0 5px #ddd;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  padding: 6px 12px;
+  font-size: 20px;
+  width: 250px;
+}
+
+.search-box button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.search-box img {
+  width: 20px;
+}
+
+.card {
+  background-color: white;
+  padding: 60px;
+  border-radius: 25px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+  width: 1200px;
+  max-width: 1200px;
+  margin-top: 50px;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.01);
+}
+
+.card h2 {
+  font-size: 34px;
+  color: #0052a0;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+
+thead {
+  background-color: #0052a0;
+  color: white;
+}
+
+thead th:first-child {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+thead th:last-child {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+th, td {
+  padding: 14px 18px;
+  text-align: left;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #f5f7fa;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  color: #0052a0;
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: 10px;
+  transition: color 0.3s ease;
+}
+
+.icon-btn:hover {
+  color: #003f7d;
+}

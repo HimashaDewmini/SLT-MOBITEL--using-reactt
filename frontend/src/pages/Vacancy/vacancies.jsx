@@ -1,6 +1,6 @@
 import React from 'react';
 import './vacancies.css';
-import VacancyNavbar from '../../components/VacancyNavbar/VacancyNavbar.jsx';
+import VacancyNavbar from '../../components/VacancyNavbar/VacancyNavbar';
 import Card from '../../components/Card/card';
 
 const Vacancies = () => {
