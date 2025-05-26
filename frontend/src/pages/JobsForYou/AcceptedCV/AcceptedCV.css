@@ -1,0 +1,104 @@
+.main-content {
+  display: flex;
+  flex: 1;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 320px;
+  background-color: #0052a0;
+  padding: 30px 10px;
+  min-height: calc(100vh - 100px);
+}
+
+.sidebar ul {
+  list-style-type: none;
+}
+
+.sidebar li {
+  margin: 25px 0;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding-left: 20px;
+  position: relative;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+.sidebar li.active a::before,
+.sidebar li a:hover::before {
+  content: "▶";
+  position: absolute;
+  left: 0;
+  color: white;
+}
+
+.sidebar a:hover {
+  color: #ffd700;
+}
+
+.content {
+  flex: 1;
+  padding: 40px;
+}
+
+.Jobcard {
+  background-color: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  width: 1200px;
+  max-width: 1200px;
+}
+
+.card h2 {
+  margin-bottom: 30px;
+  font-size: 26px;
+  font-weight: bold;
+  color: #333;
+}
+.table-wrapper {
+  overflow-x: auto;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: #004a99;
+  color: white;
+}
+
+th, td {
+  padding: 15px 20px;
+  text-align: left;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+thead th {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+td a {
+  color: #0066b3;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+td a:hover {
+  text-decoration: underline;
+}

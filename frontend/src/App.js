@@ -14,6 +14,7 @@ import ApplyJob from './pages/ApplyJob/ApplyJob.jsx';
 import JobCreation from './pages/JobsForYou/JobCreation/JobCreation.jsx';
 import JobModification from './pages/JobsForYou/JobModification/JobModification.jsx';
 import ReceivedCVs from './pages/JobsForYou/ReceivedCV/Received.jsx';
+import AcceptedCVs from './pages/JobsForYou/AcceptedCV/AcceptedCV.jsx';
 
 function App() {
   const [isLoginOpen, setIsLoginOpen] = useState(false);
@@ -134,7 +135,14 @@ function App() {
           </>
           }
           />
-        {/* // <Route path="/accepted-cvs" element={<AcceptedCVs />} /> */} */}
+        <Route path="/accepted-cvs" element={
+        <>
+        <AcceptedCVs /> 
+        <VacancyNavbar />
+        </>
+        }
+        />
+
 
           
       </Routes>
