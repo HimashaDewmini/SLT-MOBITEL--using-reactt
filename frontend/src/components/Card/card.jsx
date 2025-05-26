@@ -25,7 +25,7 @@ const card = () => {
             </ul>
           </div>
           <div className="card-footer">
-            <a href="apply.html">
+            <a href="/apply">
               <button className="apply-btn">Apply Now</button>
             </a>
           </div>
@@ -50,7 +50,7 @@ const card = () => {
             </ul>
           </div>
           <div className="card-footer">
-            <a href="apply.html">
+            <a href="/apply">
               <button className="apply-btn">Apply Now</button>
             </a>
           </div>
@@ -75,7 +75,7 @@ const card = () => {
             </ul>
           </div>
           <div className="card-footer">
-            <a href="apply.html">
+            <a href="/apply">
               <button className="apply-btn">Apply Now</button>
             </a>
           </div>
@@ -97,7 +97,7 @@ const card = () => {
             </ul>
           </div>
           <div className="card-footer">
-            <a href="apply.html">
+            <a href="/apply">
               <button className="apply-btn">Apply Now</button>
             </a>
           </div>
