@@ -1,7 +1,7 @@
 import React from 'react';
 import './JobModification.css';
 import { Link} from 'react-router-dom';
-import search from '../../../assets/search.png'; 
+import Search from '../../../assets/search.png'; 
 const JobModification = () => {
     
   return (
@@ -28,7 +28,7 @@ const JobModification = () => {
       <section className="content">
         <div className="search-box">
           <input type="text" placeholder="Search"  />
-          <button><img src={search} alt="Search" className="search" /></button>
+          <button><img src={Search} alt="earch" className="search" /></button>
         </div>
 
         <div className="Jobcard">
