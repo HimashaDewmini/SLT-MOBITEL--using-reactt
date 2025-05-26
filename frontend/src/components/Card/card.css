@@ -69,3 +69,30 @@
 .apply-btn:hover {
     background-color: #388E3C;
 }
+@media (max-width: 599px) {
+  .card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .card-body p,
+  .card-body ul {
+    font-size: 13px;
+  }
+
+  .card-header {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 899px) {
+  .card {
+    flex: 1 1 45%;
+  }
+}
+
+@media (min-width: 900px) {
+  .card {
+    flex: 1 1 22%;
+  }
+}

@@ -13,6 +13,12 @@ body {
     background-attachment: fixed;
     background-position: center;
 }
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  margin-left: auto;
+}
 
 
 .navbar {
@@ -92,4 +98,98 @@ body {
 
 .home-content {
     padding-top: 100px;
+}
+/* Base styles already defined above... */
+
+@media (max-width: 992px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 30px;
+    border-radius: 0;
+    max-width: 100%;
+    gap: 15px;
+  }
+
+  .nav-left {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .program-title {
+    font-size: 22px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 15px;
+  }
+
+  .nav-links a,
+  .nav-links button {
+    width: 100%;
+    text-align: left;
+    padding-left: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+  }
+
+  .nav-left {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .hamburger {
+    display: block;
+    margin-left: auto;
+  }
+
+  .nav-links {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links.hide {
+    display: none;
+  }
+
+  .nav-links a,
+  .nav-links button {
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+  }
+}
+@media (max-width: 576px) {
+  .logo {
+    height: 45px;
+  }
+
+  .program-title {
+    font-size: 18px;
+  }
+
+  .navbar {
+    padding: 10px 20px;
+  }
+
+  .nav-links button {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
 }
