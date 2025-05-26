@@ -13,6 +13,7 @@ import JobStatus from './pages/JobStatus/JobStatus.jsx';
 import ApplyJob from './pages/ApplyJob/ApplyJob.jsx'; 
 import JobCreation from './pages/JobsForYou/JobCreation/JobCreation.jsx';
 import JobModification from './pages/JobsForYou/JobModification/JobModification.jsx';
+import ReceivedCVs from './pages/JobsForYou/ReceivedCV/Received.jsx';
 
 function App() {
   const [isLoginOpen, setIsLoginOpen] = useState(false);
@@ -125,8 +126,15 @@ function App() {
           </>
           } 
           />
-        {/* // <Route path="/received-cvs" element={<ReceivedCVs />} />
-        // <Route path="/accepted-cvs" element={<AcceptedCVs />} /> */}
+        <Route path="/received-cvs" element={
+          <>
+
+          <ReceivedCVs />
+          <VacancyNavbar/>
+          </>
+          }
+          />
+        {/* // <Route path="/accepted-cvs" element={<AcceptedCVs />} /> */} */}
 
           
       </Routes>
