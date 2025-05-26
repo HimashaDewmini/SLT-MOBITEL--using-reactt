@@ -5,6 +5,7 @@ const ApplyJob = () => {
   return (
     <div className="form-container">
       <form>
+        
         <h2>
           Job Title: <span className="title">Web Development Trainee</span>
         </h2>
@@ -70,7 +71,8 @@ const ApplyJob = () => {
         <button type="submit" className="submit-btn">
           Submit
         </button>
-      </form>
+    
+</form>
     </div>
       
     

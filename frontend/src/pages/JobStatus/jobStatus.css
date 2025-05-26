@@ -1,47 +1,54 @@
-.job-status-page{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100vw; 
-    background-image: url('../../assets/15.avif');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+.job-status-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 1700px;
+  background-image: url('../../assets/15.avif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 20px;
+  box-sizing: border-box;
 }
- 
+
 .main-wrapper {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  width: 1500px;
-
+  width: 90%;
+  max-width: 1500px;
 }
 
 .Job-card {
   background-color: white;
-  padding: 40px;
+  padding: 30px;
   border-radius: 20px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
   width: 100%;
-  max-width: 1500px;
-  min-width: 1200px;  
+  box-sizing: border-box;
+  overflow-x: auto;
 }
 
-.card h2 {
-  font-size: 24px;
+.Job-card h2 {
+  font-size: 22px;
   margin-bottom: 20px;
   font-weight: bold;
   color: #333;
 }
 
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
 
 table {
   width: 100%;
   border-collapse: collapse;
   font-size: 16px;
+  min-width: 600px;
 }
 
 thead {
@@ -50,7 +57,7 @@ thead {
 }
 
 th, td {
-  padding: 15px 20px; 
+  padding: 12px 15px;
   text-align: left;
   border-bottom: 1px solid #f0f0f0;
 }
@@ -64,17 +71,70 @@ tbody tr:nth-child(odd) {
 }
 
 thead th:first-child {
-  border-top-left-radius: 15px;
-  border-bottom-left-radius: 15px;
+  border-top-left-radius: 10px;
 }
 
 thead th:last-child {
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
+  border-top-right-radius: 10px;
 }
 
-.table-wrapper {
-  overflow-x: auto;
+@media (max-width: 1024px) {
+  .job-status-page {
+    width: 90%;
+    padding: 0px;
+  }
+  .Job-card {
+    padding: 5px;
+    width: 90%;
+  }
+
+  table {
+    font-size: 15px;
+     width: 90%;
+  }
+
+  th, td {
+    padding: 10px 12px;
+  }
 }
 
+@media (max-width: 768px) {
+  
+  .Job-card h2 {
+    font-size: 20px;
+  }
 
+  table {
+    font-size: 12px;
+    width: 90%;
+  }
+
+  th, td {
+    padding: 8px 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .job-status-page {
+    width: 100%;
+    padding: 10px;
+  }
+  .Job-card {
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  .Job-card h2 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  table {
+    font-size: 10px;
+    min-width: 500px;
+  }
+
+  th, td {
+    padding: 8px;
+  }
+}

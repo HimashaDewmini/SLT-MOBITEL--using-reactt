@@ -93,3 +93,18 @@ body {
 .home-content {
     padding-top: 100px;
 }
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: #0055A2;
+  transition: all 0.3s ease;
+}
+
