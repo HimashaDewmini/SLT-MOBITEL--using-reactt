@@ -20,12 +20,18 @@ html, body {
   display: flex;
   flex-direction: column;
   height: 100%;                 
-  width: 100vw;                  
+  width: 100vw;  
+  padding-top: 80px;                 
   
 }
 
 
  .home-content {
-  margin-top: 600px;
-                
-} 
+  margin-top: 600px; 
+  padding: 20px;
+}
+@media (max-width: 768px) {
+  .home-content {
+    margin-top: 2000px;
+  }
+}

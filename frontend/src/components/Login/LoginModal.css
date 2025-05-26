@@ -147,89 +147,78 @@ body {
 }
 
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .login-container {
     flex-direction: column;
-    padding: 18px;
-    gap: 18px;
-    max-width: 98vw;
-    align-items: center;
+    max-width: 90%;
+    padding: 20px;
+  }
+
+  .login-form, .image-box {
+    width: 100%;
+    border-radius: 15px;
   }
 
   .login-form {
-    order: 1;
-    width: 100%;
-    max-width: 100%;
-    padding: 30px 10px;
-    border-radius: 18px;
-  }
-
-  .image-box {
-    order: 2;
-    width: 100%;
-    padding: 10px 0 0 0;
-    justify-content: center;
-  }
-
-  .image-box img {
-    width: 320px;
-    max-width: 90vw;
-    display: block;
-    margin: 0 auto;
-  }
-}
-
-@media (max-width: 500px) {
-  .login-container {
-    
-    padding: 5px;
-    gap: 8px;
-    border-radius: 10px;
-    max-width: 120vw;
-    align-items: center;
-  }
-
-  .login-form {
-    padding: 15px 10px;
-    border-radius: 30px;
-  }
-
-  .image-box img {
-    width: 300px;
-    max-width: 98vw;
+    padding: 25px;
+    text-align: center;
   }
 
   .login-form h2 {
-    font-size: 25px;
+    font-size: 24px;
   }
 
   .login-form input,
   .login-form button {
-    font-size: 18px;
-    padding: 7px 10px;
-    border-radius: 14px;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .image-box {
+    padding: 20px 0;
+  }
+
+  .image-box img {
+    max-width: 300px;
+    height: auto;
+  }
+
+  .social-buttons img {
+    width: 32px;
+    height: 32px;
   }
 }
 
+@media (max-width: 600px) {
+  .login-container {
+    max-width: 95%;
+    padding: 15px;
+    margin-top: 180px;
 
-.popup-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(2px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
-}
+  }
 
-.close-button {
-  background: transparent;
-  border: none;
-  font-size: 24px;
-  float: right;
-  cursor: pointer;
+  .login-form {
+    padding: 20px;
+  }
+
+  .login-form h2 {
+    font-size: 20px;
+  }
+
+  .login-form input,
+  .login-form button {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .social-buttons img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .image-box img {
+    max-width: 200px;
+    display: block;
+    margin: 0 auto;
+  }
 }
