@@ -31,7 +31,7 @@ const JobModification = () => {
           <button><img src={search} alt="Search" className="search" /></button>
         </div>
 
-        <div className="card">
+        <div className="Jobcard">
           <h2>Modify Jobs</h2>
           <table>
             <thead>

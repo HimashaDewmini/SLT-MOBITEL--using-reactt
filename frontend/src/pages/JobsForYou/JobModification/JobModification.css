@@ -78,9 +78,9 @@
   width: 20px;
 }
 
-.card {
+.Jobcard {
   background-color: white;
-  padding: 60px;
+  padding: 40px; 
   border-radius: 25px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
   width: 1200px;
