@@ -1,27 +1,39 @@
-import React from 'react'
-import './JobCreation.css'
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react';
+import './JobCreation.css';
+import { Link } from 'react-router-dom';
 
 const JobCreation = () => {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setSidebarOpen(!sidebarOpen);
+  };
+
   return (
-   <div className="main-content">
-      <aside className="sidebar">
-  <ul>
-    <li className="active">
-      <Link to="/job-creation"><b>Job Creation</b></Link>
-    </li>
-    <li>
-      <Link to="/job-modification">Job Modification</Link>
-    </li>
-    <li>
-      <Link to="/received-cvs">Received CVs</Link>
-    </li>
-    <li>
-      <Link to="/accepted-cvs">Accepted CVs</Link>
-    </li>
-  </ul>
-</aside>
-      <section className="content">
+    <div className="main-container">
+      {/* Hamburger Button */}
+      <button className="hamburger" onClick={toggleSidebar}>
+        ☰
+      </button>
+
+      <div className={`sidebar ${sidebarOpen ? 'open' : ''}`}>
+        <ul>
+          <li className="active">
+            <Link to="/job-creation"><b>Job Creation</b></Link>
+          </li>
+          <li>
+            <Link to="/job-modification">Job Modification</Link>
+          </li>
+          <li>
+            <Link to="/received-cvs">Received CVs</Link>
+          </li>
+          <li>
+            <Link to="/accepted-cvs">Accepted CVs</Link>
+          </li>
+        </ul>
+      </div>
+
+      <div className="content">
         <div className="job-form">
           <h2>Company Job Vacancy: Web Development Trainee</h2>
           <form>
@@ -41,9 +53,9 @@ const JobCreation = () => {
             <button type="submit" className="submit-btn">Create</button>
           </form>
         </div>
-      </section>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default JobCreation
+export default JobCreation;

@@ -2,12 +2,22 @@ import React from 'react';
 import './JobModification.css';
 import { Link} from 'react-router-dom';
 import Search from '../../../assets/search.png'; 
-const JobModification = () => {
+import { useState } from 'react';
+const JobModification = () => {const [isSidebarOpen, setSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setSidebarOpen(!isSidebarOpen);
+  };
+
     
   return (
    
         <div className="main-content">
-              <aside className="sidebar">
+              <button className="hamburger" onClick={toggleSidebar}>
+        ☰
+      </button>
+
+      <aside className={`sidebar ${isSidebarOpen ? 'open' : ''}`}>
           <ul>
             <li >
               <Link to="/job-creation"><b>Job Creation</b></Link>
@@ -33,6 +43,7 @@ const JobModification = () => {
 
         <div className="Jobcard">
           <h2>Modify Jobs</h2>
+          <div className="table-wrapper">
           <table>
             <thead>
               <tr>
@@ -86,6 +97,7 @@ const JobModification = () => {
               </tr>
             </tbody>
           </table>
+          </div>
         </div>
       </section>
     </div>

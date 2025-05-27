@@ -1,13 +1,27 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  margin-top: 100px;
+}
+
+.main-content {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+}
 
 .sidebar {
   width: 320px;
-  background-color: #0052a0; 
-  padding: 30px 10px; 
-  min-height: calc(100vh - 100px);
+  background-color: #0052a0;
+  padding: 30px 10px;
+  min-height: 100vh;
+  transition: transform 0.3s ease;
 }
 
 .sidebar ul {
   list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 .sidebar li {
@@ -36,21 +50,22 @@
   color: #ffd700;
 }
 
-
-
-
+/* CONTENT */
 .content {
   flex: 1;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  padding: 20px;
+
 }
 
+/* SEARCH BOX */
 .search-box {
   position: absolute;
   top: 30px;
-  right: 40px; 
+  right: 40px;
   display: flex;
   align-items: center;
   background-color: white;
@@ -58,13 +73,14 @@
   border-radius: 25px;
   padding: 4px 10px;
   box-shadow: inset 0 0 5px #ddd;
+  z-index: 10;
 }
 
 .search-box input {
   border: none;
   outline: none;
   padding: 6px 12px;
-  font-size: 20px;
+  font-size: 16px;
   width: 250px;
 }
 
@@ -78,26 +94,34 @@
   width: 20px;
 }
 
+
 .Jobcard {
   background-color: white;
-  padding: 40px; 
+  padding: 40px;
   border-radius: 25px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
-  width: 1200px;
+  width: 100%;
   max-width: 1200px;
-  margin-top: 50px;
+  margin-top: 100px;
   transition: transform 0.2s ease;
 }
 
-.card:hover {
+.Jobcard:hover {
   transform: scale(1.01);
 }
 
-.card h2 {
-  font-size: 34px;
+.Jobcard h2 {
+  font-size: 30px;
   color: #0052a0;
   margin-bottom: 20px;
   text-align: center;
+}
+
+/* TABLE */
+.table-wrapper {
+  overflow-x: auto;
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
 }
 
 table {
@@ -135,6 +159,7 @@ tbody tr:nth-child(even) {
   background-color: #ffffff;
 }
 
+/* BUTTONS */
 .icon-btn {
   background: none;
   border: none;
@@ -147,4 +172,201 @@ tbody tr:nth-child(even) {
 
 .icon-btn:hover {
   color: #003f7d;
+}
+
+/* HAMBURGER BUTTON */
+.hamburger {
+  display: none;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 100;
+  cursor: pointer;
+  background-color: #0052a0;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 991px) {
+  .main-content {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 350px;
+  }
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    height: 100vh;
+    z-index: 99;
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .content {
+    margin-left: 0;
+    padding-top: 100px;
+    
+  }
+
+  .search-box {
+    top: 100px;
+    right: 10px;
+    width: calc(100% - 40px);
+  }
+
+  .Jobcard {
+    width: 80%;
+    padding: 20px;
+    
+  }
+
+  .search-box input {
+    width: 100%;
+    max-width: 180px;
+  }
+}
+
+/* RESPONSIVE TABLE */
+@media (max-width: 768px) {
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+    width: 100%;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tr {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #fff;
+  }
+
+  td {
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+    border: none;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 18px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    font-weight: bold;
+    text-align: left;
+    color: #0052a0;
+  }
+}
+
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    z-index: 99;
+    height: 100vh;
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .content {
+    padding-top: 80px;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .search-box {
+    right: 10px;
+    top: 80px;
+    width: calc(100% - 40px);
+  }
+
+  .search-box input {
+    width: 100%;
+    max-width: 180px;
+  }
+
+  .Jobcard {
+    width: 50%;
+    max-width: 500px;
+    padding: 20px;
+    margin-left: 50px;
+  
+  }
+
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+    width: 80%;
+    max-width: 500px;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tr {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #fff;
+  }
+
+  td {
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+    border: none;
+    border-bottom: 1px solid #f0f0f0;
+    color: #003f7d;
+  }
+
+  td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 18px;
+    width: 45%;
+    white-space: nowrap;
+    font-weight: bold;
+    color: #0052a0;
+    text-align: left;
+  }
 }

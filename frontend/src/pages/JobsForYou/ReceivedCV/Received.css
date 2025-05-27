@@ -1,18 +1,21 @@
+
 .main-content {
   display: flex;
   flex: 1;
 }
-
 
 .sidebar {
   width: 320px;
   background-color: #0052a0;
   padding: 30px 10px;
   min-height: calc(100vh - 100px);
+  transition: transform 0.3s ease;
 }
 
 .sidebar ul {
   list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 .sidebar li {
@@ -41,7 +44,6 @@
   color: #ffd700;
 }
 
-
 .content {
   flex: 1;
   padding: 50px;
@@ -55,7 +57,7 @@
   padding: 60px;
   border-radius: 25px;
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.07);
-  width: 1200PX;
+  width: 100%;
   max-width: 1200px;
   transition: 0.3s;
 }
@@ -66,7 +68,6 @@
   font-weight: bold;
   color: #003366;
 }
-
 
 table {
   width: 100%;
@@ -109,4 +110,95 @@ tbody tr:nth-child(even) {
 
 tbody tr:nth-child(odd) {
   background-color: #ffffff;
+}
+
+/* MOBILE HEADER */
+.mobile-header {
+  display: none;
+  background-color: #0052a0;
+  color: white;
+  padding: 16px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* RESPONSIVE STYLES */
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    height: calc(100vh - 60px);
+    background-color: #0052a0;
+    transform: translateX(-100%);
+    z-index: 1000;
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .mobile-header {
+    display: flex;
+  }
+
+  .content {
+    padding: 20px;
+  }
+
+  .Jobcard {
+    padding: 20px;
+  }
+}
+.menu-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* RESPONSIVE STYLES */
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    height: calc(100vh - 60px);
+    background-color: #0052a0;
+    transform: translateX(-100%);
+    z-index: 1000;
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .mobile-header {
+    display: flex;
+  }
+
+  .content {
+    padding: 20px;
+  }
+
+  .Jobcard {
+    padding: 20px;
+  }
 }

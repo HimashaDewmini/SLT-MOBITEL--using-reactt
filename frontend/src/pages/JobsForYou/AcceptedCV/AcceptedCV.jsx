@@ -1,12 +1,22 @@
 import React from 'react'
 import './AcceptedCV.css'
 import { Link } from 'react-router-dom'
+import { useState } from 'react'
 
 const AcceptedCV = () => {
+  const [isSidebarOpen, setSidebarOpen] = useState(false);
+  
+    const toggleSidebar = () => {
+      setSidebarOpen(!isSidebarOpen);
+    };
   return (
     
-        <div className="main-content">
-                      <aside className="sidebar">
+       <div className="main-content">
+              <button className="hamburger" onClick={toggleSidebar}>
+        ☰
+      </button>
+
+      <aside className={`sidebar ${isSidebarOpen ? 'open' : ''}`}>
                   <ul>
                     <li >
                       <Link to="/job-creation"><b>Job Creation</b></Link>
