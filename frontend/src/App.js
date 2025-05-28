@@ -15,6 +15,7 @@ import JobCreation from './pages/JobsForYou/JobCreation/JobCreation.jsx';
 import JobModification from './pages/JobsForYou/JobModification/JobModification.jsx';
 import ReceivedCVs from './pages/JobsForYou/ReceivedCV/Received.jsx';
 import AcceptedCVs from './pages/JobsForYou/AcceptedCV/AcceptedCV.jsx';
+import Logout from './components/Logout/Logout.jsx';
 
 function App() {
   const [isLoginOpen, setIsLoginOpen] = useState(false);
@@ -141,6 +142,11 @@ function App() {
         <VacancyNavbar />
         </>
         }
+        />
+        <Route path="/logout" element={
+          <Logout />
+        } 
+          
         />
 
 
