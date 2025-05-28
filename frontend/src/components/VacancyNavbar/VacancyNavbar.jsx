@@ -29,7 +29,7 @@ function VacancyNavbar({ onLoginClick }) {
       <Link to="/apply" onClick={() => setMobileMenuOpen(false)}>Apply for Job</Link>
       <Link to="/vacancy-creation" onClick={() => setMobileMenuOpen(false)}>Jobs for You</Link>
       <Link to="/" onClick={() => setMobileMenuOpen(false)}>Home</Link>
-      <Link to="/login" onClick={() => setMobileMenuOpen(false)}>Login</Link>
+      <Link to="/login" onClick={() => setMobileMenuOpen(false)}>Logout</Link>
     </nav>
     </header>
   );

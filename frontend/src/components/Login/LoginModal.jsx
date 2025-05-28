@@ -24,7 +24,7 @@ export default function LoginModal({ onClose, onSwitchToSignup }) {
                 href="#"
                 onClick={(e) => {
                   e.preventDefault();
-                  onSwitchToSignup(); // ✅ add this
+                  onSwitchToSignup(); 
                 }}
               >
                 Sign Up
