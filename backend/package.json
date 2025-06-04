@@ -6,10 +6,7 @@
     "start": "node index.js",
     "dev": "nodemon index.js"
   },
-<<<<<<< HEAD
-=======
   "keywords": [],
->>>>>>> 7e62a769b977e3958aa23d3edf01fc756370b75f
   "author": "",
   "license": "ISC",
   "description": "",
@@ -21,13 +18,9 @@
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.15.1",
-<<<<<<< HEAD
-    "multer": "^2.0.1",
-=======
     "multer": "^2.0.0"
   },
   "devDependencies": {
->>>>>>> 7e62a769b977e3958aa23d3edf01fc756370b75f
     "nodemon": "^3.1.10"
   }
 }
